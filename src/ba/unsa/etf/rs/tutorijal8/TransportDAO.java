@@ -1,6 +1,5 @@
 package ba.unsa.etf.rs.tutorijal8;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.net.URL;
 import java.sql.Connection;
@@ -30,6 +29,9 @@ public class TransportDAO {
         }
     }
 
+    public static TransportDAO getInstance() {
+    }
+
     private void setupDatabase() {
         String sql="";
         URL x = getClass().getResource("/setupDatabase.sql");
@@ -47,4 +49,6 @@ public class TransportDAO {
     }
 
 
+    public void resetDatabase() {
+    }
 }
