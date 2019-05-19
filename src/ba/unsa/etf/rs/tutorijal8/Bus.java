@@ -81,6 +81,21 @@ public class Bus {
 
     @Override
     public String toString() {
-        return super.toString();
+        String ime = "";
+        ime += this.maker + " " + this.series + " (br. sjedišta: " + this.getSeatNumber() + " )";
+        if(driverOne!=null){
+            ime += driverOne.toString();
+        }
+        if(driverTwo!=null){
+            ime += driverTwo.toString();
+        }
+        return ime;
+    }
+
+    public boolean equals (Bus bus){
+        if(idBus!=null){
+            return (bus.getIdBus().equals(this.getIdBus()));
+        }
+        return false;
     }
 }
