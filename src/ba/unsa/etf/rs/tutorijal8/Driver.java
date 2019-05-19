@@ -3,9 +3,30 @@ package ba.unsa.etf.rs.tutorijal8;
 import java.time.LocalDate;
 
 public class Driver {
-    private String name, surname;
-    private int umcn;
+    private Integer idDriver = null;
+    private String name, surname, jmb;
     private LocalDate birthday, hireDate;
+
+    public Driver(){
+
+    }
+
+    public Driver (String name, String surname, String jmb, LocalDate birthday, LocalDate hireDate){
+        this.name=name;
+        this.surname=surname;
+        this.jmb=jmb;
+        this.birthday=birthday;
+        this.hireDate=hireDate;
+    }
+
+    public Driver (Integer idDriver, String name, String surname, String jmb, LocalDate birthday, LocalDate hireDate){
+        this.idDriver=idDriver;
+        this.name=name;
+        this.surname=surname;
+        this.jmb=jmb;
+        this.birthday=birthday;
+        this.hireDate=hireDate;
+    }
 
     public String getSurname() {
         return surname;
@@ -23,14 +44,6 @@ public class Driver {
         this.name = name;
     }
 
-    public int getUmcn() {
-        return umcn;
-    }
-
-    public void setUmcn(int umcn) {
-        this.umcn = umcn;
-    }
-
     public LocalDate getBirthday() {
         return birthday;
     }
@@ -45,5 +58,30 @@ public class Driver {
 
     public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
+    }
+
+    public String getJmb() {
+        return jmb;
+    }
+
+    public void setJmb(String jmb) {
+        this.jmb = jmb;
+    }
+
+    public Integer getIdDriver() {
+        return idDriver;
+    }
+
+    public void setIdDriver(Integer idDriver) {
+        this.idDriver = idDriver;
+    }
+
+    @Override
+    public String toString() {
+        return " -> (" + this.getName() + " " + this.getSurname() + " ( " + this.getJmb() + " ))";
+    }
+
+    public boolean equals (Driver driver){
+        return (driver.getJmb().equals(this.getJmb()));
     }
 }
