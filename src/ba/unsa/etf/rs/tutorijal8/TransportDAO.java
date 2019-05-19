@@ -11,12 +11,7 @@ public class TransportDAO {
     private static TransportDAO instance = null;
     private static Connection conn; 
 
-    private static PreparedStatement addDriver;
-    private static PreparedStatement addBus;
-    private static PreparedStatement addBusToDriver;
-    private static PreparedStatement deleteBus;
-    private static PreparedStatement deleteDriver;
-    
+    private PreparedStatement addDriver, zadnjiVozacId,
     private TransportDAO() {
         try {
             conn = DriverManager.getConnection("jdbc:sqlite:baza.db");
