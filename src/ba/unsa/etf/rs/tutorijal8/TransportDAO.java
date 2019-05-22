@@ -14,7 +14,7 @@ public class TransportDAO {
     private PreparedStatement addDriver, zadnjiVozacId,
     private TransportDAO() {
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:baza.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:proba.db");
             initializeStatements();
         }
         catch (SQLException e){
@@ -33,6 +33,7 @@ public class TransportDAO {
         FileReader fileReader = null;
 
         try {
+
             fileReader = new FileReader(x.getFile());
 
         } catch (SQLException e) {
