@@ -13,3 +13,9 @@ CREATE TABLE buses {
     series VARCHAR;
     seatnumber INTEGER;
 };
+
+CREATE TABLE dodjela {
+    bus_id INTEGER;
+    driver_id INTEGER;
+}
+

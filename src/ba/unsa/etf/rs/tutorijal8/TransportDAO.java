@@ -8,7 +8,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.BitSet;
 
 public class TransportDAO {
     private static TransportDAO instance = null;
@@ -52,12 +51,14 @@ public class TransportDAO {
     }
 
     public ArrayList<Driver> getDrivers() {
+        return getDrivers();
     }
 
     public void addBus(Bus bus) {
     }
 
-    public BitSet getBusses() {
+    public ArrayList<Bus> getBusses() {
+        return getBusses();
     }
 
     public void deleteBus(Bus bus) {
