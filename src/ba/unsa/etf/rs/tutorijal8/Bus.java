@@ -4,9 +4,13 @@ public class Bus {
     private Integer idBus = null;
     private String maker, series;
     private int seatNumber;
+    private int noOfDrivers;
     private Driver driverOne = null;
     private Driver driverTwo = null;
 
+    public Bus(){
+
+    }
 
     public Bus(String maker, String series, int seatNumber){
         this.maker = maker;
@@ -28,10 +32,6 @@ public class Bus {
         this.seatNumber = seatNumber;
         this.driverOne = driverOne;
         this.driverTwo = driverTwo;
-    }
-
-    public Bus() {
-
     }
 
 
@@ -97,5 +97,13 @@ public class Bus {
             return (bus.getIdBus().equals(this.getIdBus()));
         }
         return false;
+    }
+
+    public int getNoOfDrivers() {
+        return noOfDrivers;
+    }
+
+    public void setNoOfDrivers(int noOfDrivers) {
+        this.noOfDrivers = noOfDrivers;
     }
 }
